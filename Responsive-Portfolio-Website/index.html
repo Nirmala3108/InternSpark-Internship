@@ -1,144 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GUI Calculator</title>
 
-    <style>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, sans-serif;
-        }
+    <title>Nirmala | Developer Portfolio</title>
 
-        body{
-            height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            background:#d8cfee;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        .calculator{
-            background:#1e1e1e;
-            padding:20px;
-            border-radius:15px;
-            box-shadow:0 0 20px #39ff14;
-        }
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        #display{
-            width:100%;
-            height:70px;
-            margin-bottom:15px;
-            border:none;
-            border-radius:8px;
-            background:#f2f2f2;
-            font-size:28px;
-            text-align:right;
-            padding:10px;
-        }
-
-        .buttons{
-            display:grid;
-            grid-template-columns:repeat(4,70px);
-            gap:10px;
-        }
-
-        button{
-            height:60px;
-            border:none;
-            border-radius:6px;
-            font-size:28px;
-            cursor:pointer;
-            background:#f2f2f2;
-        }
-
-        button:hover{
-            opacity:0.9;
-        }
-
-        .operator{
-            background:#ffb300;
-            color:white;
-        }
-
-        .clear{
-            background:red;
-            color:white;
-        }
-
-        .equal{
-            background:green;
-            color:white;
-            grid-column:span 2;
-        }
-
-    </style>
 </head>
 
 <body>
 
-    <div class="calculator">
+    <!-- Animated Background -->
 
-        <input type="text" id="display" readonly>
+    <div class="bg-animation"></div>
 
-        <div class="buttons">
+    <!-- Custom Cursor -->
 
-            <button class="clear" onclick="clearDisplay()">C</button>
-            <button onclick="appendValue('(')">(</button>
-            <button onclick="appendValue(')')">)</button>
-            <button class="operator" onclick="appendValue('/')">÷</button>
+    <div class="cursor"></div>
 
-            <button onclick="appendValue('7')">7</button>
-            <button onclick="appendValue('8')">8</button>
-            <button onclick="appendValue('9')">9</button>
-            <button class="operator" onclick="appendValue('*')">×</button>
+    <div class="container">
 
-            <button onclick="appendValue('4')">4</button>
-            <button onclick="appendValue('5')">5</button>
-            <button onclick="appendValue('6')">6</button>
-            <button class="operator" onclick="appendValue('-')">−</button>
+        <!-- Sidebar -->
 
-            <button onclick="appendValue('1')">1</button>
-            <button onclick="appendValue('2')">2</button>
-            <button onclick="appendValue('3')">3</button>
-            <button class="operator" onclick="appendValue('+')">+</button>
+        <aside class="sidebar glass reveal">
 
-            <button onclick="appendValue('0')">0</button>
-            <button onclick="appendValue('.')">.</button>
-            <button class="equal" onclick="calculate()">=</button>
+            <img src="C:\Users\nirma\OneDrive\Pictures\Screenshots\Screenshot (355).png"
+                alt="Profile">
 
-        </div>
+            <h1>Nirmala</h1>
+
+            <h3 class="typing"></h3>
+
+            <p>
+                Passionate Frontend Developer creating
+                aesthetic and responsive web experiences.
+            </p>
+
+            <div class="socials">
+
+                <i class="fa-brands fa-github"></i>
+
+                <i class="fa-brands fa-linkedin"></i>
+
+                <i class="fa-brands fa-instagram"></i>
+
+            </div>
+
+        </aside>
+
+        <!-- Main Content -->
+
+        <main>
+
+            <!-- About -->
+
+            <section class="glass reveal">
+
+                <h2>About Me</h2>
+
+                <p>
+
+                    I’m a Frontend Developer Intern passionate
+                    about building interactive and modern web
+                    interfaces with HTML, CSS, JavaScript and Bootstrap.
+
+                </p>
+
+            </section>
+
+            <!-- Skills -->
+
+            <section class="glass reveal">
+
+                <h2>Skills</h2>
+
+                <div class="skill">
+
+                    <span>HTML</span>
+
+                    <div class="bar">
+                        <div class="progress html"></div>
+                    </div>
+
+                </div>
+
+                <div class="skill">
+
+                    <span>CSS</span>
+
+                    <div class="bar">
+                        <div class="progress css"></div>
+                    </div>
+
+                </div>
+
+                <div class="skill">
+
+                    <span>JavaScript</span>
+
+                    <div class="bar">
+                        <div class="progress js"></div>
+                    </div>
+
+                </div>
+
+                <div class="skill">
+
+                    <span>Bootstrap</span>
+
+                    <div class="bar">
+                        <div class="progress bootstrap"></div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Projects -->
+
+            <section class="glass reveal">
+
+                <h2>Projects</h2>
+
+                <div class="projects">
+
+                    <div class="project-card">
+
+                        <div class="overlay">
+
+                            <h3>GUI Calculator</h3>
+
+                            <p>
+                                Responsive calculator using
+                                JavaScript.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-card">
+
+                        <div class="overlay">
+
+                            <h3>Weather App</h3>
+
+                            <p>
+                                Dynamic weather app with
+                                interactive UI.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Contact -->
+
+            <section class="glass reveal">
+
+                <h2>Contact</h2>
+
+                <form>
+
+                    <input type="text"
+                        placeholder="Your Name">
+
+                    <input type="email"
+                        placeholder="Your Email">
+
+                    <textarea
+                        placeholder="Your Message"></textarea>
+
+                    <button>
+                        Send Message
+                    </button>
+
+                </form>
+
+            </section>
+
+        </main>
 
     </div>
 
-    <script>
-
-        function appendValue(value){
-            document.getElementById("display").value += value;
-        }
-
-        function clearDisplay(){
-            document.getElementById("display").value = "";
-        }
-
-        function calculate(){
-
-            try{
-                document.getElementById("display").value =
-                eval(document.getElementById("display").value);
-            }
-
-            catch{
-                document.getElementById("display").value = "Error";
-            }
-
-        }
-
-    </script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
