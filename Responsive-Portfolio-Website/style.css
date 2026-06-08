@@ -1,0 +1,544 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:
+    linear-gradient(
+    135deg,
+    #050816,
+    #0b1120,
+    #111827);
+
+    color:white;
+
+    overflow-x:hidden;
+}
+
+/* Animated Background */
+
+.bg-animation{
+
+    position:fixed;
+    width:100%;
+    height:100%;
+
+    background:
+    linear-gradient(
+    45deg,
+    #00c6ff,
+    #0072ff,
+    #7f5af0,
+    #00f5d4);
+
+    background-size:400% 400%;
+
+    animation:bgMove 15s ease infinite;
+
+    z-index:-2;
+
+    filter:blur(100px);
+
+    opacity:0.4;
+}
+
+@keyframes bgMove{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+/* Custom Cursor */
+
+.cursor{
+
+    width:20px;
+    height:20px;
+
+    border:2px solid white;
+
+    border-radius:50%;
+
+    position:fixed;
+
+    pointer-events:none;
+
+    transform:translate(-50%,-50%);
+
+    z-index:999;
+}
+
+/* Layout */
+
+.container{
+
+    width:90%;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:320px 1fr;
+
+    gap:45px;
+
+    padding:60px 0;
+}
+
+/* Glass */
+
+.glass{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    rgba(17,25,40,0.75);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    border:
+    1px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.3);
+
+    transition:0.4s;
+}
+
+.glass::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    background:
+    rgba(255,255,255,0.05);
+
+    border-radius:50%;
+
+    top:-60px;
+    right:-60px;
+}
+
+.glass:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 0 35px rgba(0,198,255,0.7);
+}
+
+/* Sidebar */
+
+.sidebar{
+
+    text-align:center;
+
+    position:sticky;
+
+    top:30px;
+
+    height:fit-content;
+}
+
+.sidebar img{
+
+    width:190px;
+    height:190px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    margin-bottom:20px;
+
+    border:3px solid #00f5d4;
+
+    box-shadow:
+    0 0 30px rgba(0,245,212,0.6);
+}
+
+.sidebar h1{
+
+    font-size:36px;
+}
+
+.typing{
+
+    color:#00f5d4;
+
+    margin:10px 0;
+}
+
+.sidebar p{
+
+    color:#d1d5db;
+
+    margin-top:15px;
+
+    line-height:1.9;
+}
+
+/* Social Icons */
+
+.socials{
+
+    margin-top:25px;
+}
+
+.socials i{
+
+    font-size:30px;
+
+    margin:0 12px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.socials i:hover{
+
+    color:#00f5d4;
+
+    transform:scale(1.2);
+}
+
+/* Main */
+
+main{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:55px;
+}
+
+section h2{
+
+    margin-bottom:25px;
+
+    color:#00f5d4;
+
+    font-size:32px;
+}
+
+/* Skills */
+
+.skills-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+    gap:25px;
+}
+
+.skill-card{
+
+    background:
+    rgba(255,255,255,0.08);
+
+    border:
+    1px solid rgba(255,255,255,0.12);
+
+    border-radius:20px;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    transition:0.4s;
+
+    backdrop-filter:blur(10px);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.skill-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+    height:120px;
+
+    background:
+    rgba(255,255,255,0.08);
+
+    border-radius:50%;
+
+    top:-50px;
+    right:-40px;
+}
+
+.skill-card:hover{
+
+    transform:
+    translateY(-12px)
+    scale(1.03);
+
+    box-shadow:
+    0 0 30px rgba(0,245,212,0.6);
+}
+
+.skill-card i{
+
+    font-size:55px;
+
+    margin-bottom:18px;
+
+    color:#00f5d4;
+}
+
+.skill-card h3{
+
+    color:white;
+
+    font-size:22px;
+}
+
+/* Projects */
+
+.projects-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+}
+
+.project-box{
+
+    position:relative;
+
+    height:260px;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+    135deg,
+    rgba(0,114,255,0.9),
+    rgba(0,245,212,0.9));
+
+    transition:0.5s;
+
+    cursor:pointer;
+}
+
+.project-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:200%;
+    height:200%;
+
+    background:
+    rgba(255,255,255,0.08);
+
+    transform:rotate(45deg);
+
+    top:-80%;
+    left:-80%;
+
+    transition:0.8s;
+}
+
+.project-box:hover::before{
+
+    top:100%;
+    left:100%;
+}
+
+.project-box:hover{
+
+    transform:
+    translateY(-12px)
+    scale(1.03);
+
+    box-shadow:
+    0 0 35px rgba(0,245,212,0.6);
+}
+
+.project-content{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:25px;
+
+    z-index:2;
+}
+
+.project-content h3{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+    color:white;
+}
+
+.project-content p{
+
+    color:#f1f5f9;
+
+    line-height:1.8;
+}
+
+/* Contact */
+
+form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+input,
+textarea{
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:15px;
+
+    outline:none;
+
+    background:
+    rgba(255,255,255,0.1);
+
+    color:white;
+
+    font-size:15px;
+}
+
+textarea{
+
+    height:140px;
+}
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#d1d5db;
+}
+
+button{
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #0072ff,
+    #00f5d4);
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:
+    0 0 20px rgba(0,245,212,0.6);
+}
+
+/* Reveal Animation */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    animation:reveal 1s forwards;
+}
+
+@keyframes reveal{
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    .container{
+
+        grid-template-columns:1fr;
+    }
+
+    .sidebar{
+
+        position:relative;
+    }
+
+}
