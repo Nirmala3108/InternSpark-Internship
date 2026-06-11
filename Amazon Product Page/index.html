@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Clone</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+  <div class="logo">
+    amazon
+  </div>
+
+  <div class="search-box">
+    <input type="text" placeholder="Search Amazon Products">
+    <button>
+      <i class="fa fa-search"></i>
+    </button>
+  </div>
+
+  <div class="nav-icons">
+
+    <div class="nav-item">
+      <p>Hello, Sign in</p>
+      <h4>Account</h4>
+    </div>
+
+    <div class="nav-item">
+      <p>Returns</p>
+      <h4>& Orders</h4>
+    </div>
+
+    <div class="cart">
+      <i class="fa fa-shopping-cart"></i>
+      <span id="cart-count">0</span>
+    </div>
+
+  </div>
+
+</header>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <h1>Big Sale is Live</h1>
+
+    <p>
+      Up to 70% OFF on Electronics,
+      Fashion & Accessories
+    </p>
+
+    <button>
+      Shop Now
+    </button>
+
+  </div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features">
+
+  <div class="feature-box">
+    <i class="fa-solid fa-truck-fast"></i>
+    <h3>Free Delivery</h3>
+    <p>Fast delivery across India</p>
+  </div>
+
+  <div class="feature-box">
+    <i class="fa-solid fa-credit-card"></i>
+    <h3>Secure Payment</h3>
+    <p>100% Secure Payment</p>
+  </div>
+
+  <div class="feature-box">
+    <i class="fa-solid fa-rotate-left"></i>
+    <h3>Easy Return</h3>
+    <p>10 Days Return Policy</p>
+  </div>
+
+  <div class="feature-box">
+    <i class="fa-solid fa-headset"></i>
+    <h3>24/7 Support</h3>
+    <p>Customer Support</p>
+  </div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products-section">
+
+  <h2>Featured Products</h2>
+
+  <div class="products-grid">
+    <!-- ADD THESE INSIDE .products-grid -->
+
+<!-- PRODUCT 9 -->
+
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1511385348-a52b4a160dc2?w=500">
+
+  <div class="product-info">
+
+    <h3>Gaming Console</h3>
+
+    <p class="price">₹49,999</p>
+
+    <div class="rating">★★★★★</div>
+
+    <button class="add-cart">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PRODUCT 10 -->
+
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500">
+
+  <div class="product-info">
+
+    <h3>Mechanical Keyboard</h3>
+
+    <p class="price">₹3,999</p>
+
+    <div class="rating">★★★★☆</div>
+
+    <button class="add-cart">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PRODUCT 11 -->
+
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500">
+
+  <div class="product-info">
+
+    <h3>Android Tablet</h3>
+
+    <p class="price">₹24,999</p>
+
+    <div class="rating">★★★★☆</div>
+
+    <button class="add-cart">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PRODUCT 12 -->
+
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500">
+
+  <div class="product-info">
+
+    <h3>Apple Watch</h3>
+
+    <p class="price">₹39,999</p>
+
+    <div class="rating">★★★★★</div>
+
+    <button class="add-cart">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PRODUCT 13 -->
+
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500">
+
+  <div class="product-info">
+
+    <h3>Winter Jacket</h3>
+
+    <p class="price">₹2,999</p>
+
+    <div class="rating">★★★★☆</div>
+
+    <button class="add-cart">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PRODUCT 14 -->
+
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=500">
+
+  <div class="product-info">
+
+    <h3>Leather Handbag</h3>
+
+    <p class="price">₹5,999</p>
+
+    <div class="rating">★★★★★</div>
+
+    <button class="add-cart">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PRODUCT 15 -->
+
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500">
+
+  <div class="product-info">
+
+    <h3>Casual T-Shirt</h3>
+
+    <p class="price">₹999</p>
+
+    <div class="rating">★★★★☆</div>
+
+    <button class="add-cart">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PRODUCT 16 -->
+
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=500">
+
+  <div class="product-info">
+
+    <h3>Women Fashion Dress</h3>
+
+    <p class="price">₹2,499</p>
+
+    <div class="rating">★★★★★</div>
+
+    <button class="add-cart">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PRODUCT 17 -->
+
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500">
+
+  <div class="product-info">
+
+    <h3>Office Laptop</h3>
+
+    <p class="price">₹59,999</p>
+
+    <div class="rating">★★★★☆</div>
+
+    <button class="add-cart">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PRODUCT 18 -->
+
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500">
+
+  <div class="product-info">
+
+    <h3>Gaming Laptop</h3>
+
+    <p class="price">₹1,19,999</p>
+
+    <div class="rating">★★★★★</div>
+
+    <button class="add-cart">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PRODUCT 19 -->
+
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=500">
+
+  <div class="product-info">
+
+    <h3>Portable Speaker</h3>
+
+    <p class="price">₹4,499</p>
+
+    <div class="rating">★★★★☆</div>
+
+    <button class="add-cart">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PRODUCT 20 -->
+
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=500">
+
+  <div class="product-info">
+
+    <h3>Travel Backpack</h3>
+
+    <p class="price">₹2,199</p>
+
+    <div class="rating">★★★★☆</div>
+
+    <button class="add-cart">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PRODUCT 21 -->
+
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=500">
+
+  <div class="product-info">
+
+    <h3>Sports Shoes</h3>
+
+    <p class="price">₹5,499</p>
+
+    <div class="rating">★★★★★</div>
+
+    <button class="add-cart">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PRODUCT 22 -->
+
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500">
+
+  <div class="product-info">
+
+    <h3>Beauty Kit</h3>
+
+    <p class="price">₹1,799</p>
+
+    <div class="rating">★★★★☆</div>
+
+    <button class="add-cart">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PRODUCT 23 -->
+
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500">
+
+  <div class="product-info">
+
+    <h3>Wireless Mouse</h3>
+
+    <p class="price">₹1,299</p>
+
+    <div class="rating">★★★★☆</div>
+
+    <button class="add-cart">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PRODUCT 24 -->
+
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500">
+
+  <div class="product-info">
+
+    <h3>Premium Smartphone</h3>
+
+    <p class="price">₹84,999</p>
+
+    <div class="rating">★★★★★</div>
+
+    <button class="add-cart">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PRODUCT 25 -->
+
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=500">
+
+  <div class="product-info">
+
+    <h3>Running Shoes</h3>
+
+    <p class="price">₹3,999</p>
+
+    <div class="rating">★★★★☆</div>
+
+    <button class="add-cart">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PRODUCT 26 -->
+
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1505740106531-4243f3831c78?w=500">
+
+  <div class="product-info">
+
+    <h3>Noise Cancelling Headphones</h3>
+
+    <p class="price">₹8,999</p>
+
+    <div class="rating">★★★★★</div>
+
+    <button class="add-cart">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PRODUCT 27 -->
+
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1580894908361-967195033215?w=500">
+
+  <div class="product-info">
+
+    <h3>Smart TV</h3>
+
+    <p class="price">₹54,999</p>
+
+    <div class="rating">★★★★★</div>
+
+    <button class="add-cart">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PRODUCT 28 -->
+
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500">
+
+  <div class="product-info">
+
+    <h3>Professional Camera</h3>
+
+    <p class="price">₹74,999</p>
+
+    <div class="rating">★★★★★</div>
+
+    <button class="add-cart">
+      Add to Cart
+    </button>
+
+  </div>
+
+</div>
+
+    <!-- PRODUCT 1 -->
+
+    <div class="product-card">
+
+      <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500">
+
+      <div class="product-info">
+
+        <h3>iPhone 15 Pro Max</h3>
+
+        <p class="price">₹1,49,999</p>
+
+        <div class="rating">
+          ★★★★☆
+        </div>
+
+        <button class="add-cart">
+          Add to Cart
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- PRODUCT 2 -->
+
+    <div class="product-card">
+
+      <img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=500">
+
+      <div class="product-info">
+
+        <h3>MacBook Air</h3>
+
+        <p class="price">₹1,09,999</p>
+
+        <div class="rating">
+          ★★★★★
+        </div>
+
+        <button class="add-cart">
+          Add to Cart
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- PRODUCT 3 -->
+
+    <div class="product-card">
+
+      <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500">
+
+      <div class="product-info">
+
+        <h3>Wireless Headphones</h3>
+
+        <p class="price">₹7,999</p>
+
+        <div class="rating">
+          ★★★★☆
+        </div>
+
+        <button class="add-cart">
+          Add to Cart
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- PRODUCT 4 -->
+
+    <div class="product-card">
+
+      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500">
+
+      <div class="product-info">
+
+        <h3>Smart Watch</h3>
+
+        <p class="price">₹9,999</p>
+
+        <div class="rating">
+          ★★★★★
+        </div>
+
+        <button class="add-cart">
+          Add to Cart
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- PRODUCT 5 -->
+
+    <div class="product-card">
+
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500">
+
+      <div class="product-info">
+
+        <h3>Nike Shoes</h3>
+
+        <p class="price">₹4,999</p>
+
+        <div class="rating">
+          ★★★★☆
+        </div>
+
+        <button class="add-cart">
+          Add to Cart
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- PRODUCT 6 -->
+
+    <div class="product-card">
+
+      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500">
+
+      <div class="product-info">
+
+        <h3>DSLR Camera</h3>
+
+        <p class="price">₹59,999</p>
+
+        <div class="rating">
+          ★★★★★
+        </div>
+
+        <button class="add-cart">
+          Add to Cart
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- PRODUCT 7 -->
+
+    <div class="product-card">
+
+      <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=500">
+
+      <div class="product-info">
+
+        <h3>Bluetooth Speaker</h3>
+
+        <p class="price">₹3,999</p>
+
+        <div class="rating">
+          ★★★★☆
+        </div>
+
+        <button class="add-cart">
+          Add to Cart
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- PRODUCT 8 -->
+
+    <div class="product-card">
+
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=500">
+
+      <div class="product-info">
+
+        <h3>Fashion Dress</h3>
+
+        <p class="price">₹2,499</p>
+
+        <div class="rating">
+          ★★★★☆
+        </div>
+
+        <button class="add-cart">
+          Add to Cart
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- DEAL SECTION -->
+
+<section class="deal-section">
+
+  <div class="deal-content">
+
+    <h4>LIMITED OFFER</h4>
+
+    <h1>Deal Of The Day</h1>
+
+    <p>
+      Apple AirPods Pro at
+      <span>40% OFF</span>
+    </p>
+
+    <button id="deal-btn">
+      Shop Now
+    </button>
+
+  </div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section class="testimonials">
+
+  <!-- ADD THESE INSIDE testimonial-grid -->
+
+<div class="testimonial-card">
+
+  <img src="https://randomuser.me/api/portraits/men/45.jpg">
+
+  <h3>Arjun Patel</h3>
+
+  <p>
+    Best ecommerce website UI I have ever seen.
+  </p>
+
+</div>
+
+<div class="testimonial-card">
+
+  <img src="https://randomuser.me/api/portraits/women/52.jpg">
+
+  <h3>Sneha Kapoor</h3>
+
+  <p>
+    Loved the smooth animations and modern design.
+  </p>
+
+</div>
+
+<div class="testimonial-card">
+
+  <img src="https://randomuser.me/api/portraits/men/76.jpg">
+
+  <h3>Karan Singh</h3>
+
+  <p>
+    Shopping experience feels premium and responsive.
+  </p>
+
+</div>
+
+<div class="testimonial-card">
+
+  <img src="https://randomuser.me/api/portraits/women/12.jpg">
+
+  <h3>Meera Joshi</h3>
+
+  <p>
+    Excellent layout with beautiful product cards.
+  </p>
+
+</div>
+
+<div class="testimonial-card">
+
+  <img src="https://randomuser.me/api/portraits/men/85.jpg">
+
+  <h3>Vikram Rao</h3>
+
+  <p>
+    Fully functional cart and search system works perfectly.
+  </p>
+
+</div>
+
+  <h2>Customer Reviews</h2>
+
+  <div class="testimonial-grid">
+
+    <div class="testimonial-card">
+
+      <img src="https://randomuser.me/api/portraits/women/44.jpg">
+
+      <h3>Priya Sharma</h3>
+
+      <p>
+        Amazing shopping experience.
+      </p>
+
+    </div>
+
+    <div class="testimonial-card">
+
+      <img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+      <h3>Rahul Verma</h3>
+
+      <p>
+        Genuine products and fast delivery.
+      </p>
+
+    </div>
+
+    <div class="testimonial-card">
+
+      <img src="https://randomuser.me/api/portraits/women/68.jpg">
+
+      <h3>Anjali Mehta</h3>
+
+      <p>
+        Beautiful UI and smooth shopping.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+  <h2>Subscribe For Offers</h2>
+
+  <div class="newsletter-box">
+
+    <input type="email"
+    placeholder="Enter your email">
+
+    <button id="subscribe-btn">
+      Subscribe
+    </button>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>
+    Amazon Clone Website | Frontend Project
+  </p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
