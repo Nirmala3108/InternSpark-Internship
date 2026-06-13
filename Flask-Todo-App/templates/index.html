@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card shadow p-4">
+
+    <h1 class="text-center mb-4">
+        Flask To-Do App
+    </h1>
+
+    <form action="/add" method="POST">
+
+        <div class="input-group mb-4">
+
+            <input
+                type="text"
+                name="task"
+                class="form-control"
+                placeholder="Enter Task"
+                required>
+
+            <button class="btn btn-primary">
+                Add Task
+            </button>
+
+        </div>
+
+    </form>
+
+    {% if tasks %}
+
+    <ul class="list-group">
+
+        {% for task in tasks %}
+
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+
+            {{ task }}
+
+            <div>
+
+                <a href="/edit/{{ loop.index0 }}"
+                   class="btn btn-warning btn-sm">
+                    Edit
+                </a>
+
+                <a href="/delete/{{ loop.index0 }}"
+                   class="btn btn-danger btn-sm">
+                    Delete
+                </a>
+
+            </div>
+
+        </li>
+
+        {% endfor %}
+
+    </ul>
+
+    {% else %}
+
+    <div class="alert alert-info text-center">
+        No Tasks Added Yet
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}
