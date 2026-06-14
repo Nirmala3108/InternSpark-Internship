@@ -1,36 +1,33 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
-# ==========================
-# Load Dataset
-# ==========================
+# Create output folder if it doesn't exist
+os.makedirs("output", exist_ok=True)
 
-file_path = "dataset.csv"
-
+# Load dataset
 try:
-    df = pd.read_csv(file_path)
-    print("Dataset Loaded Successfully!\n")
-
+    df = pd.read_csv("dataset.csv")
+    print("Dataset loaded successfully!\n")
 except FileNotFoundError:
-    print("CSV file not found!")
+    print("Error: dataset.csv not found.")
     exit()
 
-# ==========================
-# Basic Information
-# ==========================
-
+# ----------------------------
+# Display Dataset Information
+# ----------------------------
 print("First 5 Rows:")
 print(df.head())
 
-print("\nDataset Info:")
-print(df.info())
+print("\nDataset Information:")
+df.info()
 
 print("\nSummary Statistics:")
 print(df.describe())
 
-# ==========================
+# ----------------------------
 # Data Cleaning
-# ==========================
+# ----------------------------
 
 print("\nMissing Values:")
 print(df.isnull().sum())
@@ -38,76 +35,73 @@ print(df.isnull().sum())
 # Remove duplicate rows
 df.drop_duplicates(inplace=True)
 
-# Fill numeric missing values with mean
-numeric_columns = df.select_dtypes(include=['number']).columns
+# Fill missing numeric values with mean
+numeric_columns = df.select_dtypes(include="number").columns
 
 for col in numeric_columns:
-    df[col].fillna(df[col].mean(), inplace=True)
+    df[col] = df[col].fillna(df[col].mean())
 
-# Remove rows still containing null values
+# Remove remaining null rows
 df.dropna(inplace=True)
 
 print("\nData cleaned successfully!")
 
-# Save cleaned dataset
-df.to_csv("cleaned_data.csv", index=False)
+# Save cleaned data
+df.to_csv("output/cleaned_data.csv", index=False)
 
-# ==========================
-# Filtering Example
-# ==========================
+# ----------------------------
+# Filtering
+# ----------------------------
 
-if "Sales" in df.columns:
-    high_sales = df[df["Sales"] > df["Sales"].mean()]
+high_sales = df[df["Sales"] > df["Sales"].mean()]
 
-    print("\nHigh Sales Records:")
-    print(high_sales.head())
+print("\nRecords with Sales Above Average:")
+print(high_sales)
 
-# ==========================
-# Grouping Example
-# ==========================
+# ----------------------------
+# Grouping & Aggregation
+# ----------------------------
 
-if "Category" in df.columns and "Sales" in df.columns:
+category_sales = df.groupby("Category")["Sales"].sum()
 
-    category_sales = df.groupby("Category")["Sales"].sum()
+print("\nTotal Sales by Category:")
+print(category_sales)
 
-    print("\nTotal Sales by Category:")
-    print(category_sales)
-
-# ==========================
+# ----------------------------
 # Insights
-# ==========================
+# ----------------------------
 
-print("\nKey Insights")
+print("\n----- INSIGHTS -----")
 
-rows = len(df)
-columns = len(df.columns)
+print(f"Total Records: {len(df)}")
+print(f"Total Columns: {len(df.columns)}")
 
-print(f"Total Records: {rows}")
-print(f"Total Columns: {columns}")
+highest_category = category_sales.idxmax()
+highest_sales = category_sales.max()
 
-if len(numeric_columns) > 0:
-    print("\nAverage Values:")
-    print(df[numeric_columns].mean())
+print(
+    f"Highest Performing Category: "
+    f"{highest_category} ({highest_sales})"
+)
 
-# ==========================
+print("\nAverage Values:")
+print(df[numeric_columns].mean())
+
+# ----------------------------
 # Visualization
-# ==========================
+# ----------------------------
 
-if "Category" in df.columns and "Sales" in df.columns:
+plt.figure(figsize=(8, 5))
+category_sales.plot(kind="bar")
 
-    category_sales.plot(
-        kind="bar",
-        figsize=(8,5),
-        title="Sales by Category"
-    )
+plt.title("Sales by Category")
+plt.xlabel("Category")
+plt.ylabel("Total Sales")
+plt.tight_layout()
 
-    plt.xlabel("Category")
-    plt.ylabel("Total Sales")
-    plt.tight_layout()
+plt.savefig("output/analysis_graph.png")
+plt.show()
 
-    plt.savefig("analysis_graph.png")
-    plt.show()
-
-    print("\nGraph saved as analysis_graph.png")
+print("\nGraph saved successfully!")
 
 print("\nAnalysis Completed Successfully!")
