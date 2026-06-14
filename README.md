@@ -1,2 +1,2 @@
 # InternSpark_Internship
-Frontend Developer Internship Tasks - InternSpark
+Frontend Developer and Python Developer Internship Tasks - InternSpark
